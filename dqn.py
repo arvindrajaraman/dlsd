@@ -263,7 +263,7 @@ if __name__ == '__main__':
 
         run = wandb.init(
             project="language-skills",
-            entity="arvind6902",
+            entity=os.getenv("WANDB_ENTITY"),
             name=run_name,
             config=config
         )
