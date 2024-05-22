@@ -1,0 +1,68 @@
+description: lunar_1h_s3 sweep
+program: diayn.py
+method: bayes
+metric:
+  goal: maximize
+  name: I(z;s)
+parameters:
+  action_size:
+    value: 4
+  skill_size:
+    value: 3
+  state_size:
+    value: 8
+  embedding_size:
+    value: 3
+  batch_size:
+    value: 128
+  buffer_size:
+    value: 10080
+  env_name:
+    value: LunarLander-v2
+  exp_type:
+    value: mlp
+  conv:
+    value: false
+  embedding_type:
+    value: 1h
+  device:
+    value: cuda
+  eps_start:
+    value: 1.0
+  eps_end:
+    value: 0.01
+  steps:
+    value: 800000
+  discrim_units:
+    value: 256
+  policy_units:
+    value: 256
+  save_freq:
+    value: 200000
+  vis_freq:
+    value: 50000
+  warmup_steps:
+    value: 5000
+  gym_np:
+    value: true
+  save_checkpoints:
+    value: false
+  save_rollouts:
+    value: false
+  tau:
+    value: 0.001
+  max_steps_per_ep:
+    value: 1000
+  eps_decay:
+    value: 0.99995
+  gamma:
+    value: 0.95
+  
+  policy_lr:
+    values: [0.0005, 0.0001, 0.005, 0.001, 0.05, 0.01]
+  discrim_lr:
+    values: [0.0005, 0.0001, 0.005, 0.001, 0.05, 0.01]
+  discrim_update_freq:
+    values: [2, 4, 8, 16]
+  model_update_freq:
+    values: [2, 4, 8, 16]

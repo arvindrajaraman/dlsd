@@ -1,0 +1,32 @@
+action_size: 4
+batch_size: 1024
+buffer_size: 10080
+discrim_lr: 0.0001
+env_name: LunarLander-v2
+
+steps: 800000
+max_steps_per_ep: 1000
+save_freq: 200000
+vis_freq: 25000
+warmup_steps: 5000
+save_rollouts: false
+
+eps_decay: 0.99995
+eps_start: 1.0
+eps_end: 0.01
+
+gamma: 0.9
+policy_lr: 0.001
+skill_size: 3
+state_size: 8
+tau: 0.001
+model_update_freq: 4
+exp_type: mlp
+discrim_units: 512
+policy_units: 512
+embedding_type: identity
+embedding_size: 8
+device: cuda
+conv: false
+save_checkpoints: true
+gym_np: true

@@ -1,0 +1,29 @@
+action_size: 17
+batch_size: 512
+buffer_size: 50400
+env_name: Craftax-Classic-Symbolic-v1
+
+steps: 1000000
+max_steps_per_ep: 1000
+save_freq: 250000
+vis_freq: 250000
+log_freq: 100
+warmup_steps: 10000
+rollouts_per_skill: 3
+save_checkpoints: false
+save_rollouts: true
+
+eps_decay: 0.999997
+eps_start: 1.0
+eps_end: 0.01
+
+gamma: 0.99
+policy_lr: 0.0002
+skill_size: 5
+state_size: 1345
+tau: 0.001
+model_update_freq: 4
+exp_type: mlp
+policy_units: 768
+device: cuda
+gym_np: false

@@ -1,0 +1,51 @@
+name: ablations_z_diayn_raw_10
+skill_learning_method: diayn
+exp_type: mlp
+
+# Training regime
+steps: 2000000
+warmup_steps: 10000
+max_steps_per_ep: 1000
+model_update_freq: 20
+batch_size: 512
+buffer_size: 50400
+
+# Learning rates
+discrim_lr: 0.001
+policy_lr: 0.001
+
+# Visualization
+save_freq: 250000
+vis_freq: 250000
+rollouts_per_skill: 3
+save_checkpoints: true
+save_rollouts: true
+vectorization: 100
+
+# Reward shaping
+reward_pr_coeff: 1.0
+reward_gt_coeff: 0.0
+reward_coeff_schedule: constant
+
+# Exploration
+eps_start: 1.0
+eps_end: 0.1
+eps_end_perc: 0.75
+
+# Embedding
+embedding_size: 1345
+embedding_type: identity
+skill_size: 10
+
+# Other
+discrim_units: 768
+policy_units: 768
+gamma: 0.99
+tau: 0.001
+device: cuda
+gym_np: false
+
+# Environment
+env_name: Craftax-Classic-Symbolic-v1
+state_size: 1345
+action_size: 17

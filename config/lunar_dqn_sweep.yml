@@ -1,0 +1,52 @@
+description: lunar_dqn sweep
+program: dqn.py
+method: bayes
+metric:
+  goal: maximize
+  name: score_gt/all
+parameters:
+  action_size:
+    value: 4
+  batch_size:
+    value: 128
+  buffer_size:
+    value: 10080
+  env_name:
+    value: LunarLander-v2
+  steps:
+    value: 800000
+  save_freq:
+    value: 200000
+  vis_freq:
+    value: 100000
+  warmup_steps:
+    value: 0
+  eps_start:
+    value: 1.0
+  eps_end:
+    value: 0.01
+  gamma:
+    value: 0.99
+  state_size:
+    value: 8
+  tau:
+    value: 0.001
+  exp_type:
+    value: mlp
+  policy_units:
+    value: 512
+  device:
+    value: cuda
+  conv:
+    value: false
+  gym_np:
+    value: true
+  max_steps_per_ep:
+    value: 1000
+
+  eps_decay:
+    values: [0.9995, 0.99995, 0.999995]
+  policy_lr:
+    values: [0.005, 0.001, 0.0005, 0.0001]
+  model_update_freq:
+    values: [1, 2, 4, 8]

@@ -1,0 +1,49 @@
+# Custom for this project
+wandb/
+data/
+slurm/*.out
+slurm/*.txt
+video_buffer/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local development settings
+.env
+
+# Compiled Python files
+*.pyc
+
+# Dependency directories
+venv/
+env/
+env.bak/
+env1/
+env2/
+env3/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Virtual environment
+.pyenv/
+.Python
+pyvenv.cfg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VSCode settings
+.vscode/
+
+# Editor-specific files
+*~
+
+# OS-specific files
+.DS_Store
+Thumbs.db

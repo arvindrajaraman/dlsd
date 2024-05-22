@@ -1,0 +1,74 @@
+description: dqn_sweep
+program: diayn_fast.py
+method: bayes
+metric:
+  goal: maximize
+  name: score/crafter
+parameters:
+  env_name:
+    value: Craftax-Classic-Symbolic-v1
+  state_size:
+    value: 1345
+  action_size:
+    value: 17
+  gamma:
+    value: 0.99
+  tau:
+    value: 0.001
+  device:
+    value: cuda
+  gym_np:
+    value: false
+  save_rollouts:
+    value: false
+  save_checkpoints:
+    value: false
+  rollouts_per_skill:
+    value: 3
+  embedding_type:
+    value: identity
+  embedding_size:
+    value: 1345
+  skill_size:
+    value: 1
+  vectorization:
+    value: 100
+  batch_size:
+    value: 512
+  buffer_size:
+    value: 50400
+  warmup_steps:
+    value: 10000
+  max_steps_per_ep:
+    value: 1000
+  steps:
+    value: 2000000
+  save_freq:
+    value: 250000
+  vis_freq:
+    value: 250000
+  reward_pr_coeff:
+    value: 0.0
+  reward_gt_coeff:
+    value: 1.0
+  eps_start:
+    value: 1.0
+  eps_end:
+    value: 0.1
+  discrim_lr:
+    value: 0.0
+  discrim_units:
+    value: 1
+  skill_learning_method:
+    value: diayn
+  reward_coeff_schedule:
+    value: constant
+  
+  policy_units:
+    values: [768, 1024, 2048]
+  policy_lr:
+    values: [0.01, 0.005, 0.001, 0.0005, 0.0001]
+  eps_end_perc:
+    values: [0.9, 0.75, 0.5, 0.25]
+  model_update_freq:
+    values: [1, 5, 10, 20]
